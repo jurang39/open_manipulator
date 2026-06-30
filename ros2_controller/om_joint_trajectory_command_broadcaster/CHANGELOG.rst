@@ -2,25 +2,13 @@
 Changelog for package om_joint_trajectory_command_broadcaster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.0.0 (2026-06-24)
-------------------
-* None
-
-4.1.4 (2026-04-27)
-------------------
-* None
-
-4.1.3 (2026-03-18)
-------------------
-* None
-
 4.1.2 (2026-01-09)
 ------------------
 * None
 
 4.1.1 (2025-11-13)
 ------------------
-* Updated for new realtime_tools::RealtimePublisher API
+* Updated for new realtime_tools::RealtimePublisher API\
 * Contributors: Woojin Wie
 
 4.1.0 (2025-10-24)

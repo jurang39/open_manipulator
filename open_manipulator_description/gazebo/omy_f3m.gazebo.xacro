@@ -8,11 +8,11 @@
     <transmission name="${trans}">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="${joint}">
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="${actuator}">
         <mechanicalReduction>1</mechanicalReduction>
-        <hardwareInterface>PositionJointInterface</hardwareInterface>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
       </actuator>
     </transmission>
   </xacro:macro>
@@ -27,6 +27,8 @@
       <minDepth>0.001</minDepth>
     </gazebo>
   </xacro:macro>
+
+  <gazebo><self_collide>false</self_collide></gazebo>
 
   <xacro:Link reference="${prefix}link0"/>
   <xacro:Link reference="${prefix}link1"/>

@@ -5,7 +5,7 @@
   <xacro:arg name="use_mock_hardware" default="false" />
   <xacro:arg name="mock_sensor_commands" default="false" />
   <xacro:arg name="config_type" default="omy_f3m" />
-  <xacro:arg name="ros2_control_type" default="omy_f3m_position" />
+  <xacro:arg name="ros2_control_type" default="omy_f3m_current" />
 
   <xacro:include filename="$(find open_manipulator_description)/urdf/omy_f3m/omy_f3m_arm.urdf.xacro" />
 
@@ -67,10 +67,21 @@
     use_mock_hardware="$(arg use_mock_hardware)"
     mock_sensor_commands="$(arg mock_sensor_commands)"/>
 
-  <gazebo>
-    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-      <parameters>$(find open_manipulator_bringup)/config/$(arg config_type)/hardware_controller_manager.yaml</parameters>
-    </plugin>
-  </gazebo>
+  <xacro:if value="$(arg use_sim)">
+    <gazebo>
+      <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>$(find open_manipulator_bringup)/config/$(arg config_type)/hardware_controller_manager.yaml</parameters>
+        <update_rate>400.0</update_rate>
+      </plugin>
+    </gazebo>
+  </xacro:if>
 
+  <!-- <gazebo reference="$(arg prefix)link3">
+    <self_collision>true</self_collision>
+  </gazebo>
+  
+  <gazebo reference="$(arg prefix)link4">
+    <self_collision>true</self_collision>
+  </gazebo> -->
+      
 </robot>

@@ -63,7 +63,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             'ros2_control_type',
-            default_value='omy_f3m_position',
+            default_value='omy_f3m_current',
             description='Type of ros2_control',
         ),
         DeclareLaunchArgument(
@@ -144,7 +144,7 @@ def generate_launch_description():
         package='controller_manager',
         executable='spawner',
         arguments=[
-            'arm_controller',
+            'tdc_effort_controller',
             'gripper_controller',
             'joint_state_broadcaster',
         ],

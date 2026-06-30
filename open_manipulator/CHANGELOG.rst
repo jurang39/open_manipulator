@@ -2,24 +2,6 @@
 Changelog for package open_manipulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.0.0 (2026-06-24)
-------------------
-* Updated dockerfile to use zenoh-cpp
-* Updated SRDF for OMY-F3M
-* Contributors: Sungho Woo
-
-4.1.4 (2026-04-27)
-------------------
-* Added nodes for drawing mission: shape_detector_node and omx_trajectory_controller_node
-* Added omx_drawing.launch.py for integrated mission control
-* Updated package.xml version and synchronized dependencies
-* Contributors: Daeyeol Kang
-
-4.1.3 (2026-03-18)
-------------------
-* Add realsense d405 urdf for OMY-F3M
-* Contributors: Wonho Yun
-
 4.1.2 (2026-01-09)
 ------------------
 * Add urdf for every model
